@@ -67,10 +67,10 @@ export function PromoPopup() {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="w-[calc(100vw-0.75rem)] max-h-[calc(100vh-0.75rem)] overflow-hidden border-0 bg-transparent p-0 shadow-none sm:w-[calc(100vw-1.5rem)] sm:max-w-[92vw] md:max-w-none [&>button]:hidden">
-        <div className="relative mx-auto w-full max-w-[720px] overflow-hidden rounded-[26px] bg-[#1351AA] text-white sm:rounded-[30px] md:w-[min(92vw,720px)]">
+      <DialogContent className="w-[calc(100vw-0.75rem)] max-h-[calc(100dvh-0.75rem)] overflow-visible border-0 bg-transparent p-0 shadow-none sm:w-[calc(100vw-1.5rem)] sm:max-h-[calc(100dvh-1.5rem)] sm:max-w-[92vw] md:max-w-none [&>button]:hidden">
+        <div className="relative mx-auto flex w-full max-w-[720px] max-h-[calc(100dvh-0.75rem)] flex-col overflow-hidden rounded-[26px] bg-[#1351AA] text-white sm:max-h-[calc(100dvh-1.5rem)] sm:rounded-[30px] md:w-[min(92vw,720px)]">
           <DialogClose
-            className="absolute top-2 right-2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/14 text-white transition-colors hover:bg-white/24 focus:outline-hidden focus:ring-2 focus:ring-white/60 sm:top-4 sm:right-4 sm:h-10 sm:w-10"
+            className="absolute top-3 right-3 z-30 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0B3E86]/88 text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] backdrop-blur-sm transition-colors hover:bg-[#0A3472] focus:outline-hidden focus:ring-2 focus:ring-white/60 sm:top-4 sm:right-4 sm:h-10 sm:w-10"
             aria-label="Close promo popup"
           >
             <span aria-hidden className="text-lg leading-none">
@@ -81,21 +81,21 @@ export function PromoPopup() {
             aria-hidden
             animate={{ y: [0, -18, 0], x: [0, 12, 0] }}
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -top-12 right-6 h-24 w-24 rounded-full opacity-95 sm:h-28 sm:w-28 md:right-8 md:h-40 md:w-40"
+            className="absolute -top-10 right-5 h-20 w-20 rounded-full opacity-95 sm:-top-12 sm:right-6 sm:h-28 sm:w-28 md:right-8 md:h-40 md:w-40"
             style={{ background: '#FFE88A' }}
           />
-          <div className="relative z-10 grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)] md:items-center">
-            <div className="flex flex-col gap-2 p-4 sm:gap-3 sm:p-6 md:p-7 lg:p-8">
-              <div className="flex flex-col gap-2 sm:gap-3">
+          <div className="relative z-10 grid min-h-0 flex-1 md:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)] md:items-center">
+            <div className="flex min-h-0 flex-col justify-between gap-3 p-3.5 pr-12 pt-12 sm:gap-3 sm:p-5 sm:pr-14 sm:pt-14 md:p-7 md:pr-7 md:pt-7 lg:p-8">
+              <div className="flex min-h-0 flex-col gap-2 sm:gap-3">
                 <div>
                   <div
-                    className="inline-flex rounded-full border border-white/30 px-2 py-0.5 text-xs sm:px-3 sm:py-1"
+                    className="inline-flex rounded-full border border-white/30 px-2 py-0.5 text-[10px] sm:px-3 sm:py-1"
                     style={{ fontFamily: 'Inter', fontSize: '10px', letterSpacing: '0.15em' }}
                   >
                     SOFT OPENING
                   </div>
                   <DialogTitle
-                    className="mt-2 text-left text-2xl leading-[1] font-normal tracking-[-0.04em] sm:mt-3 sm:text-[44px] sm:leading-[0.88] md:text-[64px] lg:text-[74px]"
+                    className="mt-2 text-left text-[clamp(1.65rem,8vw,2.75rem)] leading-[0.92] font-normal tracking-[-0.04em] sm:mt-3 sm:text-[44px] sm:leading-[0.88] md:text-[64px] lg:text-[74px]"
                     style={{
                       fontFamily: 'Fraunces, serif',
                       fontWeight: 400,
@@ -106,23 +106,23 @@ export function PromoPopup() {
                     starts <span style={{ fontStyle: 'italic', color: '#FFE88A' }}>here.</span>
                   </DialogTitle>
                   <DialogDescription
-                    className="mt-1.5 max-w-[24rem] text-left text-xs leading-[1.4] text-white/72 sm:mt-3 sm:text-sm sm:leading-6 md:text-[15px]"
+                    className="mt-1.5 max-w-[17rem] text-left text-[11px] leading-[1.4] text-white/72 sm:mt-3 sm:max-w-[24rem] sm:text-sm sm:leading-6 md:text-[15px]"
                     style={{ fontFamily: 'Inter' }}
                   >
                     Wash 5kg and get 1kg free. Limited time only.
                   </DialogDescription>
                 </div>
 
-                <div className="rounded-[20px] px-4 py-3 sm:rounded-[24px] sm:px-5 sm:py-4 md:px-5 md:py-4 lg:px-6" style={{ background: '#FFE88A', color: '#0E0E10' }}>
+                <div className="rounded-[18px] px-3 py-2.5 sm:rounded-[24px] sm:px-5 sm:py-4 md:px-5 md:py-4 lg:px-6" style={{ background: '#FFE88A', color: '#0E0E10' }}>
                   <div
-                    className="text-xl leading-[0.95] font-black tracking-[-0.03em] sm:text-[28px] md:text-[36px] lg:text-[42px]"
+                    className="text-[clamp(1.1rem,5.8vw,1.75rem)] leading-[0.95] font-black tracking-[-0.03em] sm:text-[28px] md:text-[36px] lg:text-[42px]"
                     style={{ fontFamily: 'Archivo' }}
                   >
                     WASH 5KG
                   </div>
                   <div className="mt-2 h-px w-full bg-black/12 sm:mt-3" />
                   <div
-                    className="mt-2 text-lg leading-none sm:mt-3 sm:text-[22px] md:text-[30px] lg:text-[34px]"
+                    className="mt-2 text-[clamp(0.95rem,5vw,1.375rem)] leading-none sm:mt-3 sm:text-[22px] md:text-[30px] lg:text-[34px]"
                     style={{ fontFamily: 'Fraunces', fontStyle: 'italic' }}
                   >
                     get 1kg <span style={{ color: '#1351AA' }}>free.</span>
@@ -130,22 +130,22 @@ export function PromoPopup() {
                 </div>
 
                 <div>
-                  <div className="mb-2 opacity-80 text-xs sm:mb-3 sm:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.15em' }}>
+                  <div className="mb-2 text-[10px] opacity-80 sm:mb-3 sm:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.15em' }}>
                     PROMO ENDS IN
                   </div>
-                  <div className="grid grid-cols-4 gap-2 sm:gap-3">
+                  <div className="grid grid-cols-4 gap-1.5 sm:gap-3">
                     {cells.map(([value, label]) => (
                       <div
                         key={label}
-                        className="rounded-lg bg-white/10 px-2 py-2 text-center backdrop-blur-sm sm:rounded-2xl sm:px-3 sm:py-3 md:px-4 md:py-4"
+                        className="rounded-lg bg-white/10 px-1.5 py-2 text-center backdrop-blur-sm sm:rounded-2xl sm:px-3 sm:py-3 md:px-4 md:py-4"
                       >
                         <div
-                          className="text-sm leading-none font-extrabold tracking-[-0.02em] sm:text-[24px] md:text-[30px] lg:text-[34px]"
+                          className="text-[clamp(0.95rem,4.8vw,1.5rem)] leading-none font-extrabold tracking-[-0.02em] sm:text-[24px] md:text-[30px] lg:text-[34px]"
                           style={{ fontFamily: 'Archivo' }}
                         >
                           {String(value).padStart(2, '0')}
                         </div>
-                        <div className="mt-1 opacity-70 text-[9px] sm:text-[10px] md:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.12em' }}>
+                        <div className="mt-1 text-[8px] opacity-70 sm:text-[10px] md:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.12em' }}>
                           {label}
                         </div>
                       </div>
@@ -154,7 +154,7 @@ export function PromoPopup() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center gap-2 pt-0 sm:flex-row sm:justify-between sm:gap-3 sm:pt-1">
+              <div className="flex flex-col items-center justify-center gap-2 pt-1 sm:flex-row sm:justify-between sm:gap-3 sm:pt-1">
                 <p className="text-[11px] leading-4 text-center text-white/74 sm:text-left sm:text-[13px] sm:leading-5 sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
                   Valid until June 30, 2026
                 </p>
