@@ -67,35 +67,35 @@ export function PromoPopup() {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="w-[calc(100vw-1rem)] max-h-[calc(100vh-1rem)] overflow-y-auto border-0 bg-transparent p-0 shadow-none sm:max-w-[92vw] md:max-w-none [&>button]:hidden">
-        <div className="relative mx-auto w-full max-w-[760px] overflow-hidden rounded-[30px] bg-[#1351AA] text-white md:w-[min(92vw,760px)]">
+      <DialogContent className="w-[calc(100vw-0.75rem)] max-h-[calc(100vh-0.75rem)] overflow-hidden border-0 bg-transparent p-0 shadow-none sm:w-[calc(100vw-1.5rem)] sm:max-w-[92vw] md:max-w-none [&>button]:hidden">
+        <div className="relative mx-auto w-full max-w-[720px] overflow-hidden rounded-[26px] bg-[#1351AA] text-white sm:rounded-[30px] md:w-[min(92vw,720px)]">
           <DialogClose
-            className="absolute top-4 right-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/14 text-white transition-colors hover:bg-white/24 focus:outline-hidden focus:ring-2 focus:ring-white/60"
+            className="absolute top-2 right-2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/14 text-white transition-colors hover:bg-white/24 focus:outline-hidden focus:ring-2 focus:ring-white/60 sm:top-4 sm:right-4 sm:h-10 sm:w-10"
             aria-label="Close promo popup"
           >
             <span aria-hidden className="text-lg leading-none">
-              ×
+              &times;
             </span>
           </DialogClose>
           <motion.div
             aria-hidden
             animate={{ y: [0, -18, 0], x: [0, 12, 0] }}
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -top-12 right-6 h-28 w-28 rounded-full opacity-95 sm:h-32 sm:w-32 md:right-8 md:h-40 md:w-40"
+            className="absolute -top-12 right-6 h-24 w-24 rounded-full opacity-95 sm:h-28 sm:w-28 md:right-8 md:h-40 md:w-40"
             style={{ background: '#FFE88A' }}
           />
           <div className="relative z-10 grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)] md:items-center">
-            <div className="flex flex-col gap-4 overflow-y-auto p-5 sm:p-6 md:p-7 lg:p-8">
-              <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2 p-4 sm:gap-3 sm:p-6 md:p-7 lg:p-8">
+              <div className="flex flex-col gap-2 sm:gap-3">
                 <div>
                   <div
-                    className="inline-flex rounded-full border border-white/30 px-3 py-1"
-                    style={{ fontFamily: 'Inter', fontSize: 11, letterSpacing: '0.15em' }}
+                    className="inline-flex rounded-full border border-white/30 px-2 py-0.5 text-xs sm:px-3 sm:py-1"
+                    style={{ fontFamily: 'Inter', fontSize: '10px', letterSpacing: '0.15em' }}
                   >
                     SOFT OPENING
                   </div>
                   <DialogTitle
-                    className="mt-4 text-left text-[44px] leading-[0.88] font-normal tracking-[-0.04em] sm:text-[56px] md:text-[64px] lg:text-[74px]"
+                    className="mt-2 text-left text-2xl leading-[1] font-normal tracking-[-0.04em] sm:mt-3 sm:text-[44px] sm:leading-[0.88] md:text-[64px] lg:text-[74px]"
                     style={{
                       fontFamily: 'Fraunces, serif',
                       fontWeight: 400,
@@ -106,23 +106,23 @@ export function PromoPopup() {
                     starts <span style={{ fontStyle: 'italic', color: '#FFE88A' }}>here.</span>
                   </DialogTitle>
                   <DialogDescription
-                    className="mt-3 max-w-[24rem] text-left text-sm leading-6 text-white/72 sm:text-[15px]"
+                    className="mt-1.5 max-w-[24rem] text-left text-xs leading-[1.4] text-white/72 sm:mt-3 sm:text-sm sm:leading-6 md:text-[15px]"
                     style={{ fontFamily: 'Inter' }}
                   >
-                    Wash 5kg and get 1kg free while our soft opening offer is still running.
+                    Wash 5kg and get 1kg free. Limited time only.
                   </DialogDescription>
                 </div>
 
-                <div className="rounded-[24px] px-5 py-4 sm:px-6 md:px-5 lg:px-6" style={{ background: '#FFE88A', color: '#0E0E10' }}>
+                <div className="rounded-[20px] px-4 py-3 sm:rounded-[24px] sm:px-5 sm:py-4 md:px-5 md:py-4 lg:px-6" style={{ background: '#FFE88A', color: '#0E0E10' }}>
                   <div
-                    className="text-[28px] leading-[0.95] font-black tracking-[-0.03em] sm:text-[34px] md:text-[36px] lg:text-[42px]"
+                    className="text-xl leading-[0.95] font-black tracking-[-0.03em] sm:text-[28px] md:text-[36px] lg:text-[42px]"
                     style={{ fontFamily: 'Archivo' }}
                   >
                     WASH 5KG
                   </div>
-                  <div className="mt-3 h-px w-full bg-black/12" />
+                  <div className="mt-2 h-px w-full bg-black/12 sm:mt-3" />
                   <div
-                    className="mt-3 text-[22px] leading-none sm:text-[28px] md:text-[30px] lg:text-[34px]"
+                    className="mt-2 text-lg leading-none sm:mt-3 sm:text-[22px] md:text-[30px] lg:text-[34px]"
                     style={{ fontFamily: 'Fraunces', fontStyle: 'italic' }}
                   >
                     get 1kg <span style={{ color: '#1351AA' }}>free.</span>
@@ -130,22 +130,22 @@ export function PromoPopup() {
                 </div>
 
                 <div>
-                  <div className="mb-3 opacity-80" style={{ fontFamily: 'Inter', fontSize: 12, letterSpacing: '0.15em' }}>
+                  <div className="mb-2 opacity-80 text-xs sm:mb-3 sm:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.15em' }}>
                     PROMO ENDS IN
                   </div>
-                  <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                  <div className="grid grid-cols-4 gap-2 sm:gap-3">
                     {cells.map(([value, label]) => (
                       <div
                         key={label}
-                        className="rounded-2xl bg-white/10 px-3 py-3 text-center backdrop-blur-sm sm:px-4 sm:py-4"
+                        className="rounded-lg bg-white/10 px-2 py-2 text-center backdrop-blur-sm sm:rounded-2xl sm:px-3 sm:py-3 md:px-4 md:py-4"
                       >
                         <div
-                          className="text-[28px] leading-none font-extrabold tracking-[-0.02em] sm:text-[32px] md:text-[30px] lg:text-[34px]"
+                          className="text-sm leading-none font-extrabold tracking-[-0.02em] sm:text-[24px] md:text-[30px] lg:text-[34px]"
                           style={{ fontFamily: 'Archivo' }}
                         >
                           {String(value).padStart(2, '0')}
                         </div>
-                        <div className="mt-1 opacity-70" style={{ fontFamily: 'Inter', fontSize: 11, letterSpacing: '0.15em' }}>
+                        <div className="mt-1 opacity-70 text-[9px] sm:text-[10px] md:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.12em' }}>
                           {label}
                         </div>
                       </div>
@@ -154,14 +154,14 @@ export function PromoPopup() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 pt-1 sm:flex-nowrap">
-                <p className="text-[13px] leading-5 text-white/74 sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
-                  Valid until {PROMO_ENDS_LABEL}.
+              <div className="flex flex-col items-center justify-center gap-2 pt-0 sm:flex-row sm:justify-between sm:gap-3 sm:pt-1">
+                <p className="text-[11px] leading-4 text-center text-white/74 sm:text-left sm:text-[13px] sm:leading-5 sm:whitespace-nowrap" style={{ fontFamily: 'Inter' }}>
+                  Valid until June 30, 2026
                 </p>
                 <a
                   href="#pricing"
                   onClick={() => handleOpenChange(false)}
-                  className="inline-flex h-10 shrink-0 items-center justify-center whitespace-nowrap rounded-full px-4 text-[13px] font-medium transition-transform hover:scale-[1.02]"
+                  className="inline-flex h-8 shrink-0 items-center justify-center whitespace-nowrap rounded-full px-3 text-xs font-medium transition-transform hover:scale-[1.02] sm:h-10 sm:px-4 sm:text-[13px]"
                   style={{ background: '#FFFFFF', color: '#1351AA', fontFamily: 'Inter' }}
                 >
                   See pricing
@@ -169,12 +169,12 @@ export function PromoPopup() {
               </div>
             </div>
 
-            <div className="relative flex min-h-[220px] items-end p-4 pt-0 sm:min-h-[280px] sm:p-6 sm:pt-0 md:min-h-0 md:items-center md:p-6 md:pl-0 lg:p-7 lg:pl-0">
+            <div className="relative hidden min-h-[160px] items-end p-4 pt-0 sm:flex sm:min-h-[220px] sm:p-6 sm:pt-0 md:min-h-0 md:items-center md:p-6 md:pl-0 lg:p-7 lg:pl-0">
               <motion.div
                 initial={{ rotate: -3, opacity: 0, y: 26 }}
                 animate={{ rotate: -2, opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: 'easeOut' }}
-                className="relative h-[220px] w-full overflow-hidden rounded-[26px] shadow-2xl sm:h-[280px] md:h-[460px] lg:h-[520px]"
+                className="relative h-[160px] w-full overflow-hidden rounded-[20px] shadow-2xl sm:h-[220px] sm:rounded-[26px] md:h-[380px] md:rounded-[26px] lg:h-[520px]"
               >
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1755372397633-b8b4f2124b71?w=1200&q=80"
