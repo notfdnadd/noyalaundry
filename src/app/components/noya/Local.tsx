@@ -3,7 +3,7 @@ import { MapPin, Phone, Clock } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 const stores = [
-  { name: 'Noya Kebayoran Lama', area: 'Jakarta Selatan', hrs: '07:30 – 22:00' },
+  { name: 'Noya Kebayoran Lama', area: 'Jakarta Selatan', hrs: '07:30 – 22:00; Closed on Tuesday' },
 ];
 
 export function Local() {

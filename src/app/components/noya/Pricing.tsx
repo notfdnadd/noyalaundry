@@ -36,7 +36,7 @@ export function Pricing() {
                 letterSpacing: '-0.03em',
               }}
             >
-              Honest, by the <span style={{ fontStyle: 'italic', color: '#1351AA' }}>kilo.</span>
+              Price, by the <span style={{ fontStyle: 'italic', color: '#1351AA' }}>kilo.</span>
             </h2>
           </div>
         </div>

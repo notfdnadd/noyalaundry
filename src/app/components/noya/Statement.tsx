@@ -35,7 +35,7 @@ export function Statement() {
             <div className="mt-12 grid sm:grid-cols-3 gap-8">
               {[
                 ['Premium care', 'Gentle detergents, garment-aware cycles, hand-finished folds.'],
-                ['Honest pricing', 'No hidden fees. Per-kilo, transparent, neighborhood-friendly.'],
+                ['Accurate pricing', 'No hidden fees. Per-kilo, transparent, neighborhood-friendly.'],
                 ['Zero hassle', 'Pickup, wash, return — schedule it from your couch.'],
               ].map(([t, d]) => (
                 <div key={t}>
