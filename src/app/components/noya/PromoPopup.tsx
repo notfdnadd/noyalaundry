@@ -84,8 +84,8 @@ export function PromoPopup() {
             className="absolute -top-10 right-5 h-20 w-20 rounded-full opacity-95 sm:-top-12 sm:right-6 sm:h-28 sm:w-28 md:right-8 md:h-40 md:w-40"
             style={{ background: '#FFE88A' }}
           />
-          <div className="relative z-10 grid min-h-0 flex-1 md:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)] md:items-center">
-            <div className="flex min-h-0 flex-col justify-between gap-3 p-3.5 pr-12 pt-12 sm:gap-3 sm:p-5 sm:pr-14 sm:pt-14 md:p-7 md:pr-7 md:pt-7 lg:p-8">
+          <div className="relative z-10 grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)_minmax(0,0.62fr)] items-center sm:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] md:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)]">
+            <div className="flex min-h-0 flex-col justify-between gap-3 p-3.5 pr-3 pt-12 sm:gap-3 sm:p-5 sm:pr-5 sm:pt-14 md:p-7 md:pr-7 md:pt-7 lg:p-8">
               <div className="flex min-h-0 flex-col gap-2 sm:gap-3">
                 <div>
                   <div
@@ -95,7 +95,7 @@ export function PromoPopup() {
                     SOFT OPENING
                   </div>
                   <DialogTitle
-                    className="mt-2 text-left text-[clamp(1.65rem,8vw,2.75rem)] leading-[0.92] font-normal tracking-[-0.04em] sm:mt-3 sm:text-[44px] sm:leading-[0.88] md:text-[64px] lg:text-[74px]"
+                    className="mt-2 text-left text-[clamp(1.35rem,7vw,2.75rem)] leading-[0.92] font-normal tracking-[-0.04em] sm:mt-3 sm:text-[44px] sm:leading-[0.88] md:text-[64px] lg:text-[74px]"
                     style={{
                       fontFamily: 'Fraunces, serif',
                       fontWeight: 400,
@@ -106,7 +106,7 @@ export function PromoPopup() {
                     starts <span style={{ fontStyle: 'italic', color: '#FFE88A' }}>here.</span>
                   </DialogTitle>
                   <DialogDescription
-                    className="mt-1.5 max-w-[17rem] text-left text-[11px] leading-[1.4] text-white/72 sm:mt-3 sm:max-w-[24rem] sm:text-sm sm:leading-6 md:text-[15px]"
+                    className="mt-1.5 max-w-[11rem] text-left text-[10px] leading-[1.45] text-white/72 sm:mt-3 sm:max-w-[15rem] sm:text-sm sm:leading-6 md:max-w-[24rem] md:text-[15px]"
                     style={{ fontFamily: 'Inter' }}
                   >
                     Wash 5kg and get 1kg free. Limited time only.
@@ -115,14 +115,14 @@ export function PromoPopup() {
 
                 <div className="rounded-[18px] px-3 py-2.5 sm:rounded-[24px] sm:px-5 sm:py-4 md:px-5 md:py-4 lg:px-6" style={{ background: '#FFE88A', color: '#0E0E10' }}>
                   <div
-                    className="text-[clamp(1.1rem,5.8vw,1.75rem)] leading-[0.95] font-black tracking-[-0.03em] sm:text-[28px] md:text-[36px] lg:text-[42px]"
+                    className="text-[clamp(1rem,4.5vw,1.75rem)] leading-[0.95] font-black tracking-[-0.03em] sm:text-[28px] md:text-[36px] lg:text-[42px]"
                     style={{ fontFamily: 'Archivo' }}
                   >
                     WASH 5KG
                   </div>
                   <div className="mt-2 h-px w-full bg-black/12 sm:mt-3" />
                   <div
-                    className="mt-2 text-[clamp(0.95rem,5vw,1.375rem)] leading-none sm:mt-3 sm:text-[22px] md:text-[30px] lg:text-[34px]"
+                    className="mt-2 text-[clamp(0.85rem,3.8vw,1.375rem)] leading-none sm:mt-3 sm:text-[22px] md:text-[30px] lg:text-[34px]"
                     style={{ fontFamily: 'Fraunces', fontStyle: 'italic' }}
                   >
                     get 1kg <span style={{ color: '#1351AA' }}>free.</span>
@@ -133,19 +133,19 @@ export function PromoPopup() {
                   <div className="mb-2 text-[10px] opacity-80 sm:mb-3 sm:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.15em' }}>
                     PROMO ENDS IN
                   </div>
-                  <div className="grid grid-cols-4 gap-1.5 sm:gap-3">
+                  <div className="grid grid-cols-4 gap-1 sm:gap-3">
                     {cells.map(([value, label]) => (
                       <div
                         key={label}
-                        className="rounded-lg bg-white/10 px-1.5 py-2 text-center backdrop-blur-sm sm:rounded-2xl sm:px-3 sm:py-3 md:px-4 md:py-4"
+                        className="rounded-lg bg-white/10 px-1 py-2 text-center backdrop-blur-sm sm:rounded-2xl sm:px-3 sm:py-3 md:px-4 md:py-4"
                       >
                         <div
-                          className="text-[clamp(0.95rem,4.8vw,1.5rem)] leading-none font-extrabold tracking-[-0.02em] sm:text-[24px] md:text-[30px] lg:text-[34px]"
+                          className="text-[clamp(0.85rem,3.8vw,1.5rem)] leading-none font-extrabold tracking-[-0.02em] sm:text-[24px] md:text-[30px] lg:text-[34px]"
                           style={{ fontFamily: 'Archivo' }}
                         >
                           {String(value).padStart(2, '0')}
                         </div>
-                        <div className="mt-1 text-[8px] opacity-70 sm:text-[10px] md:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.12em' }}>
+                        <div className="mt-1 text-[7px] opacity-70 sm:text-[10px] md:text-xs" style={{ fontFamily: 'Inter', letterSpacing: '0.1em' }}>
                           {label}
                         </div>
                       </div>
@@ -169,18 +169,19 @@ export function PromoPopup() {
               </div>
             </div>
 
-            <div className="relative hidden min-h-[160px] items-end p-4 pt-0 sm:flex sm:min-h-[220px] sm:p-6 sm:pt-0 md:min-h-0 md:items-center md:p-6 md:pl-0 lg:p-7 lg:pl-0">
+            <div className="relative flex min-h-0 items-end justify-end p-2 pl-0 pt-12 sm:p-4 sm:pl-0 sm:pt-14 md:items-center md:p-6 md:pl-0 md:pt-0 lg:p-7 lg:pl-0">
               <motion.div
                 initial={{ rotate: -3, opacity: 0, y: 26 }}
                 animate={{ rotate: -2, opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: 'easeOut' }}
-                className="relative h-[160px] w-full overflow-hidden rounded-[20px] shadow-2xl sm:h-[220px] sm:rounded-[26px] md:h-[380px] md:rounded-[26px] lg:h-[520px]"
+                className="relative h-[56%] min-h-[220px] w-full overflow-hidden rounded-[20px] shadow-2xl sm:h-[70%] sm:min-h-[280px] sm:rounded-[24px] md:h-[380px] md:min-h-0 md:rounded-[26px] lg:h-[520px]"
               >
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1755372397633-b8b4f2124b71?w=1200&q=80"
                   alt="Editorial portrait with fresh fabrics"
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-[58%_center]"
                 />
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#1351AA]/8 to-[#1351AA]/28" />
               </motion.div>
             </div>
           </div>
